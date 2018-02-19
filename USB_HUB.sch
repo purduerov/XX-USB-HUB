@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2844,6 +2844,62 @@ Example: SX-32S</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="BackplaneParts">
+<packages>
+<package name="T2I5P">
+<wire x1="0.1" y1="0" x2="0.1" y2="6.6" width="0.127" layer="21"/>
+<wire x1="0.1" y1="6.6" x2="-19.8" y2="6.6" width="0.127" layer="21"/>
+<wire x1="-19.8" y1="6.6" x2="-19.8" y2="0" width="0.127" layer="21"/>
+<wire x1="-19.8" y1="0" x2="-10.5" y2="0" width="0.127" layer="21"/>
+<wire x1="-10.5" y1="0" x2="-10.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="-10.5" y1="-1" x2="-5.5" y2="-1" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="-1" x2="-5.5" y2="0" width="0.127" layer="21"/>
+<wire x1="-5.5" y1="0" x2="0.1" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="-19.1" y="3.3" drill="0.8"/>
+<pad name="P$2" x="-11.7" y="3.3" drill="0.8"/>
+<pad name="P$3" x="-9.7" y="3.3" drill="0.8"/>
+<pad name="P$4" x="-7.7" y="3.3" drill="0.8"/>
+<pad name="P$5" x="-5.7" y="3.3" drill="0.8"/>
+<pad name="P$6" x="-3.7" y="3.3" drill="0.8"/>
+<pad name="P$7" x="-0.7" y="3.3" drill="0.8"/>
+</package>
+</packages>
+<symbols>
+<symbol name="T2I5P">
+<wire x1="-7.62" y1="0" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<pin name="1" x="-5.08" y="-5.08" length="middle" rot="R90"/>
+<pin name="2" x="-2.54" y="-5.08" length="middle" rot="R90"/>
+<pin name="3" x="0" y="-5.08" length="middle" rot="R90"/>
+<pin name="4" x="2.54" y="-5.08" length="middle" rot="R90"/>
+<pin name="5" x="5.08" y="-5.08" length="middle" rot="R90"/>
+<text x="-5.08" y="5.08" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="T2I5P">
+<gates>
+<gate name="&gt;NAME" symbol="T2I5P" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="T2I5P">
+<connects>
+<connect gate="&gt;NAME" pin="1" pad="P$2"/>
+<connect gate="&gt;NAME" pin="2" pad="P$3"/>
+<connect gate="&gt;NAME" pin="3" pad="P$4"/>
+<connect gate="&gt;NAME" pin="4" pad="P$5"/>
+<connect gate="&gt;NAME" pin="5" pad="P$6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2876,22 +2932,6 @@ Example: SX-32S</description>
 <part name="+5V" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="USB1_+5V" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="C13" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="R21" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
-<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="USB2_+5V" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="C5" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="R9" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
-<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="USB3_+5V" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="C6" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
-<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="USB4_+5V" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="C7" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
-<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
-<part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_A_L" device=""/>
 <part name="C12" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
 <part name="C15" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
@@ -2919,20 +2959,6 @@ Example: SX-32S</description>
 <part name="GND_IN" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="+5V1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="+5V2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="USB1_DM" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB2_DM" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB3_DM" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB4_DM" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB1_DP" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB2_DP" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB3_DP" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB4_DP" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB1_GND" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB2_GND" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB3_GND" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="USB4_GND" library="SparkFun-Connectors" deviceset="M01" device="PTH"/>
-<part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U1" library="TLV71211DBVR" deviceset="TLV71211DBVR" device=""/>
 <part name="+5V3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
@@ -2957,6 +2983,30 @@ Example: SX-32S</description>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C14" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF" device="-0805-10V-10%" package3d_urn="urn:adsk.eagle:package:37429/1" value="10uF"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U$11" library="BackplaneParts" deviceset="T2I5P" device=""/>
+<part name="C19" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="R17" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
+<part name="GND21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+5V8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="U$2" library="BackplaneParts" deviceset="T2I5P" device=""/>
+<part name="C20" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="R18" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
+<part name="GND23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+5V9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="U$3" library="BackplaneParts" deviceset="T2I5P" device=""/>
+<part name="C25" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="R19" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
+<part name="GND25" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+5V10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="U$4" library="BackplaneParts" deviceset="T2I5P" device=""/>
+<part name="C29" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0603-25V-(+80/-20%)" value="0.1uF"/>
+<part name="R20" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="RESISTOR" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value=" 0"/>
+<part name="GND27" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="+5V11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="GND22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND26" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND28" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2986,22 +3036,6 @@ Example: SX-32S</description>
 <instance part="+5V" gate="1" x="127" y="25.4"/>
 <instance part="GND6" gate="1" x="78.74" y="-2.54"/>
 <instance part="GND7" gate="1" x="109.22" y="-2.54"/>
-<instance part="USB1_+5V" gate="G$1" x="175.26" y="78.74" rot="MR180"/>
-<instance part="C13" gate="G$1" x="187.96" y="73.66"/>
-<instance part="R21" gate="G$1" x="203.2" y="78.74"/>
-<instance part="GND8" gate="1" x="187.96" y="66.04"/>
-<instance part="USB2_+5V" gate="G$1" x="175.26" y="58.42" rot="MR180"/>
-<instance part="C5" gate="G$1" x="187.96" y="53.34"/>
-<instance part="R9" gate="G$1" x="203.2" y="58.42"/>
-<instance part="GND9" gate="1" x="187.96" y="45.72"/>
-<instance part="USB3_+5V" gate="G$1" x="175.26" y="38.1" rot="MR180"/>
-<instance part="C6" gate="G$1" x="187.96" y="33.02"/>
-<instance part="R10" gate="G$1" x="203.2" y="38.1"/>
-<instance part="GND10" gate="1" x="187.96" y="25.4"/>
-<instance part="USB4_+5V" gate="G$1" x="175.26" y="17.78" rot="MR180"/>
-<instance part="C7" gate="G$1" x="187.96" y="12.7"/>
-<instance part="R11" gate="G$1" x="203.2" y="17.78"/>
-<instance part="GND11" gate="1" x="187.96" y="5.08"/>
 <instance part="FRAME1" gate="G$1" x="154.94" y="-121.92"/>
 <instance part="FRAME1" gate="G$2" x="327.66" y="-121.92"/>
 <instance part="C12" gate="G$1" x="-86.36" y="-12.7"/>
@@ -3030,20 +3064,6 @@ Example: SX-32S</description>
 <instance part="GND_IN" gate="G$1" x="-99.06" y="-93.98" rot="MR180"/>
 <instance part="GND12" gate="1" x="-81.28" y="-101.6"/>
 <instance part="+5V1" gate="1" x="-81.28" y="-60.96"/>
-<instance part="+5V2" gate="1" x="246.38" y="55.88"/>
-<instance part="USB1_DM" gate="G$1" x="175.26" y="-15.24" rot="MR180"/>
-<instance part="USB2_DM" gate="G$1" x="175.26" y="-25.4" rot="MR180"/>
-<instance part="USB3_DM" gate="G$1" x="175.26" y="-35.56" rot="MR180"/>
-<instance part="USB4_DM" gate="G$1" x="175.26" y="-45.72" rot="MR180"/>
-<instance part="USB1_DP" gate="G$1" x="175.26" y="-55.88" rot="MR180"/>
-<instance part="USB2_DP" gate="G$1" x="175.26" y="-66.04" rot="MR180"/>
-<instance part="USB3_DP" gate="G$1" x="175.26" y="-76.2" rot="MR180"/>
-<instance part="USB4_DP" gate="G$1" x="175.26" y="-86.36" rot="MR180"/>
-<instance part="USB1_GND" gate="G$1" x="238.76" y="-15.24" rot="MR180"/>
-<instance part="USB2_GND" gate="G$1" x="238.76" y="-25.4" rot="MR180"/>
-<instance part="USB3_GND" gate="G$1" x="238.76" y="-35.56" rot="MR180"/>
-<instance part="USB4_GND" gate="G$1" x="238.76" y="-45.72" rot="MR180"/>
-<instance part="GND13" gate="1" x="269.24" y="-38.1"/>
 <instance part="GND14" gate="1" x="15.24" y="12.7"/>
 <instance part="U1" gate="A" x="320.04" y="63.5"/>
 <instance part="+5V3" gate="1" x="309.88" y="71.12"/>
@@ -3068,6 +3088,30 @@ Example: SX-32S</description>
 <instance part="GND19" gate="1" x="-20.32" y="-22.86"/>
 <instance part="C14" gate="G$1" x="-43.18" y="-48.26"/>
 <instance part="GND20" gate="1" x="-43.18" y="-55.88"/>
+<instance part="U$11" gate="&gt;NAME" x="215.9" y="-20.32" rot="R90"/>
+<instance part="C19" gate="G$1" x="261.62" y="-20.32"/>
+<instance part="R17" gate="G$1" x="276.86" y="-15.24"/>
+<instance part="GND21" gate="1" x="261.62" y="-27.94"/>
+<instance part="+5V8" gate="1" x="287.02" y="-7.62"/>
+<instance part="U$2" gate="&gt;NAME" x="215.9" y="-45.72" rot="R90"/>
+<instance part="C20" gate="G$1" x="261.62" y="-45.72"/>
+<instance part="R18" gate="G$1" x="276.86" y="-40.64"/>
+<instance part="GND23" gate="1" x="261.62" y="-53.34"/>
+<instance part="+5V9" gate="1" x="287.02" y="-33.02"/>
+<instance part="U$3" gate="&gt;NAME" x="215.9" y="-71.12" rot="R90"/>
+<instance part="C25" gate="G$1" x="261.62" y="-71.12"/>
+<instance part="R19" gate="G$1" x="276.86" y="-66.04"/>
+<instance part="GND25" gate="1" x="261.62" y="-78.74"/>
+<instance part="+5V10" gate="1" x="287.02" y="-58.42"/>
+<instance part="U$4" gate="&gt;NAME" x="215.9" y="-96.52" rot="R90"/>
+<instance part="C29" gate="G$1" x="261.62" y="-96.52"/>
+<instance part="R20" gate="G$1" x="276.86" y="-91.44"/>
+<instance part="GND27" gate="1" x="261.62" y="-104.14"/>
+<instance part="+5V11" gate="1" x="287.02" y="-83.82"/>
+<instance part="GND22" gate="1" x="228.6" y="-27.94"/>
+<instance part="GND24" gate="1" x="228.6" y="-53.34"/>
+<instance part="GND26" gate="1" x="228.6" y="-78.74"/>
+<instance part="GND28" gate="1" x="228.6" y="-104.14"/>
 </instances>
 <busses>
 </busses>
@@ -3109,26 +3153,6 @@ Example: SX-32S</description>
 <wire x1="109.22" y1="5.08" x2="109.22" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="C13" gate="G$1" pin="2"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="187.96" y1="71.12" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="187.96" y1="50.8" x2="187.96" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C6" gate="G$1" pin="2"/>
-<pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="187.96" y1="30.48" x2="187.96" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="C7" gate="G$1" pin="2"/>
-<pinref part="GND11" gate="1" pin="GND"/>
-<wire x1="187.96" y1="10.16" x2="187.96" y2="7.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-40.64" y1="35.56" x2="-40.64" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="1"/>
@@ -3142,26 +3166,6 @@ Example: SX-32S</description>
 <wire x1="-91.44" y1="-93.98" x2="-81.28" y2="-93.98" width="0.1524" layer="91"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="-81.28" y1="-99.06" x2="-81.28" y2="-93.98" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="USB1_GND" gate="G$1" pin="1"/>
-<wire x1="246.38" y1="-15.24" x2="259.08" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="USB2_GND" gate="G$1" pin="1"/>
-<wire x1="259.08" y1="-15.24" x2="259.08" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="-25.4" x2="246.38" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="USB3_GND" gate="G$1" pin="1"/>
-<wire x1="246.38" y1="-35.56" x2="259.08" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="-35.56" x2="259.08" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="259.08" y="-25.4"/>
-<pinref part="USB4_GND" gate="G$1" pin="1"/>
-<wire x1="259.08" y1="-30.48" x2="259.08" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="-45.72" x2="259.08" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="-45.72" x2="259.08" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="259.08" y="-35.56"/>
-<pinref part="GND13" gate="1" pin="GND"/>
-<wire x1="269.24" y1="-35.56" x2="269.24" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="-30.48" x2="259.08" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="259.08" y="-30.48"/>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
@@ -3250,6 +3254,50 @@ Example: SX-32S</description>
 <wire x1="-86.36" y1="-48.26" x2="-78.74" y2="-48.26" width="0.1524" layer="91"/>
 <junction x="-78.74" y="-48.26"/>
 <wire x1="-48.26" y1="-50.8" x2="-48.26" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C19" gate="G$1" pin="2"/>
+<pinref part="GND21" gate="1" pin="GND"/>
+<wire x1="261.62" y1="-22.86" x2="261.62" y2="-25.4" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C20" gate="G$1" pin="2"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="261.62" y1="-48.26" x2="261.62" y2="-50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C25" gate="G$1" pin="2"/>
+<pinref part="GND25" gate="1" pin="GND"/>
+<wire x1="261.62" y1="-73.66" x2="261.62" y2="-76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C29" gate="G$1" pin="2"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+<wire x1="261.62" y1="-99.06" x2="261.62" y2="-101.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="&gt;NAME" pin="2"/>
+<wire x1="220.98" y1="-99.06" x2="228.6" y2="-99.06" width="0.1524" layer="91"/>
+<pinref part="GND28" gate="1" pin="GND"/>
+<wire x1="228.6" y1="-101.6" x2="228.6" y2="-99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="&gt;NAME" pin="2"/>
+<wire x1="220.98" y1="-73.66" x2="228.6" y2="-73.66" width="0.1524" layer="91"/>
+<pinref part="GND26" gate="1" pin="GND"/>
+<wire x1="228.6" y1="-76.2" x2="228.6" y2="-73.66" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="&gt;NAME" pin="2"/>
+<wire x1="220.98" y1="-48.26" x2="228.6" y2="-48.26" width="0.1524" layer="91"/>
+<pinref part="GND24" gate="1" pin="GND"/>
+<wire x1="228.6" y1="-50.8" x2="228.6" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$11" gate="&gt;NAME" pin="2"/>
+<wire x1="220.98" y1="-22.86" x2="228.6" y2="-22.86" width="0.1524" layer="91"/>
+<pinref part="GND22" gate="1" pin="GND"/>
+<wire x1="228.6" y1="-25.4" x2="228.6" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -3348,22 +3396,6 @@ Example: SX-32S</description>
 <wire x1="-81.28" y1="-63.5" x2="-81.28" y2="-71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R21" gate="G$1" pin="2"/>
-<pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="78.74" x2="208.28" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="58.42" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
-<junction x="208.28" y="58.42"/>
-<pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="208.28" y1="48.26" x2="208.28" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="38.1" x2="208.28" y2="17.78" width="0.1524" layer="91"/>
-<junction x="208.28" y="38.1"/>
-<pinref part="+5V2" gate="1" pin="+5V"/>
-<wire x1="246.38" y1="53.34" x2="246.38" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="48.26" x2="208.28" y2="48.26" width="0.1524" layer="91"/>
-<junction x="208.28" y="48.26"/>
-</segment>
-<segment>
 <pinref part="U1" gate="A" pin="IN"/>
 <pinref part="+5V3" gate="1" pin="+5V"/>
 <wire x1="322.58" y1="63.5" x2="309.88" y2="63.5" width="0.1524" layer="91"/>
@@ -3393,45 +3425,29 @@ Example: SX-32S</description>
 <wire x1="360.68" y1="2.54" x2="370.84" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="370.84" y1="2.54" x2="370.84" y2="12.7" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="N$12" class="0">
 <segment>
-<pinref part="USB1_+5V" gate="G$1" pin="1"/>
-<pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="78.74" x2="187.96" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="R21" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="78.74" x2="198.12" y2="78.74" width="0.1524" layer="91"/>
-<junction x="187.96" y="78.74"/>
+<pinref part="R17" gate="G$1" pin="2"/>
+<pinref part="+5V8" gate="1" pin="+5V"/>
+<wire x1="281.94" y1="-15.24" x2="287.02" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-15.24" x2="287.02" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="N$13" class="0">
 <segment>
-<pinref part="USB2_+5V" gate="G$1" pin="1"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="58.42" x2="187.96" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="58.42" x2="198.12" y2="58.42" width="0.1524" layer="91"/>
-<junction x="187.96" y="58.42"/>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="+5V9" gate="1" pin="+5V"/>
+<wire x1="281.94" y1="-40.64" x2="287.02" y2="-40.64" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-40.64" x2="287.02" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="N$14" class="0">
 <segment>
-<pinref part="USB3_+5V" gate="G$1" pin="1"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="38.1" x2="187.96" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="38.1" x2="198.12" y2="38.1" width="0.1524" layer="91"/>
-<junction x="187.96" y="38.1"/>
+<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="+5V10" gate="1" pin="+5V"/>
+<wire x1="281.94" y1="-66.04" x2="287.02" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-66.04" x2="287.02" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="N$15" class="0">
 <segment>
-<pinref part="USB4_+5V" gate="G$1" pin="1"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="17.78" x2="187.96" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="R11" gate="G$1" pin="1"/>
-<wire x1="187.96" y1="17.78" x2="198.12" y2="17.78" width="0.1524" layer="91"/>
-<junction x="187.96" y="17.78"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<pinref part="+5V11" gate="1" pin="+5V"/>
+<wire x1="281.94" y1="-91.44" x2="287.02" y2="-91.44" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-91.44" x2="287.02" y2="-86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PWRCTL1/BATEN1" class="0">
@@ -3614,9 +3630,9 @@ Example: SX-32S</description>
 <label x="-38.1" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB4_DP" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-86.36" x2="198.12" y2="-86.36" width="0.1524" layer="91"/>
-<label x="193.04" y="-86.36" size="1.778" layer="95"/>
+<pinref part="U$4" gate="&gt;NAME" pin="3"/>
+<wire x1="220.98" y1="-96.52" x2="228.6" y2="-96.52" width="0.1524" layer="91"/>
+<label x="228.6" y="-96.52" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DM4" class="0">
@@ -3626,9 +3642,9 @@ Example: SX-32S</description>
 <label x="-38.1" y="58.42" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB4_DM" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-45.72" x2="198.12" y2="-45.72" width="0.1524" layer="91"/>
-<label x="193.04" y="-45.72" size="1.778" layer="95"/>
+<pinref part="U$4" gate="&gt;NAME" pin="4"/>
+<wire x1="220.98" y1="-93.98" x2="228.6" y2="-93.98" width="0.1524" layer="91"/>
+<label x="228.6" y="-93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DM3" class="0">
@@ -3638,9 +3654,9 @@ Example: SX-32S</description>
 <label x="-38.1" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB3_DM" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-35.56" x2="198.12" y2="-35.56" width="0.1524" layer="91"/>
-<label x="193.04" y="-35.56" size="1.778" layer="95"/>
+<pinref part="U$3" gate="&gt;NAME" pin="4"/>
+<wire x1="220.98" y1="-68.58" x2="228.6" y2="-68.58" width="0.1524" layer="91"/>
+<label x="228.6" y="-68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DP3" class="0">
@@ -3650,9 +3666,9 @@ Example: SX-32S</description>
 <label x="-38.1" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB3_DP" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-76.2" x2="198.12" y2="-76.2" width="0.1524" layer="91"/>
-<label x="193.04" y="-76.2" size="1.778" layer="95"/>
+<pinref part="U$3" gate="&gt;NAME" pin="3"/>
+<wire x1="220.98" y1="-71.12" x2="228.6" y2="-71.12" width="0.1524" layer="91"/>
+<label x="228.6" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DM2" class="0">
@@ -3662,9 +3678,9 @@ Example: SX-32S</description>
 <label x="53.34" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB2_DM" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-25.4" x2="198.12" y2="-25.4" width="0.1524" layer="91"/>
-<label x="193.04" y="-25.4" size="1.778" layer="95"/>
+<pinref part="U$2" gate="&gt;NAME" pin="4"/>
+<wire x1="220.98" y1="-43.18" x2="228.6" y2="-43.18" width="0.1524" layer="91"/>
+<label x="228.6" y="-43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DP2" class="0">
@@ -3674,9 +3690,9 @@ Example: SX-32S</description>
 <label x="53.34" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB2_DP" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-66.04" x2="198.12" y2="-66.04" width="0.1524" layer="91"/>
-<label x="193.04" y="-66.04" size="1.778" layer="95"/>
+<pinref part="U$2" gate="&gt;NAME" pin="3"/>
+<wire x1="220.98" y1="-45.72" x2="228.6" y2="-45.72" width="0.1524" layer="91"/>
+<label x="228.6" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -3695,9 +3711,9 @@ Example: SX-32S</description>
 <label x="53.34" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB1_DM" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-15.24" x2="198.12" y2="-15.24" width="0.1524" layer="91"/>
-<label x="193.04" y="-15.24" size="1.778" layer="95"/>
+<pinref part="U$11" gate="&gt;NAME" pin="4"/>
+<wire x1="220.98" y1="-17.78" x2="228.6" y2="-17.78" width="0.1524" layer="91"/>
+<label x="228.6" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DP1" class="0">
@@ -3707,9 +3723,9 @@ Example: SX-32S</description>
 <label x="53.34" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="USB1_DP" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="-55.88" x2="198.12" y2="-55.88" width="0.1524" layer="91"/>
-<label x="193.04" y="-55.88" size="1.778" layer="95"/>
+<pinref part="U$11" gate="&gt;NAME" pin="3"/>
+<wire x1="220.98" y1="-20.32" x2="228.6" y2="-20.32" width="0.1524" layer="91"/>
+<label x="228.6" y="-20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -3726,6 +3742,46 @@ Example: SX-32S</description>
 <pinref part="R24" gate="G$1" pin="1"/>
 <wire x1="358.14" y1="15.24" x2="360.68" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="360.68" y1="15.24" x2="360.68" y2="12.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="USB1_+5V" class="0">
+<segment>
+<pinref part="C19" gate="G$1" pin="1"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="-15.24" x2="271.78" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="U$11" gate="&gt;NAME" pin="5"/>
+<wire x1="261.62" y1="-15.24" x2="220.98" y2="-15.24" width="0.1524" layer="91"/>
+<junction x="261.62" y="-15.24"/>
+</segment>
+</net>
+<net name="USB2_+5V" class="0">
+<segment>
+<pinref part="C20" gate="G$1" pin="1"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="-40.64" x2="271.78" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="&gt;NAME" pin="5"/>
+<wire x1="261.62" y1="-40.64" x2="220.98" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="261.62" y="-40.64"/>
+</segment>
+</net>
+<net name="USB3_+5V" class="0">
+<segment>
+<pinref part="C25" gate="G$1" pin="1"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="-66.04" x2="271.78" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="&gt;NAME" pin="5"/>
+<wire x1="261.62" y1="-66.04" x2="220.98" y2="-66.04" width="0.1524" layer="91"/>
+<junction x="261.62" y="-66.04"/>
+</segment>
+</net>
+<net name="USB4_+5V" class="0">
+<segment>
+<pinref part="C29" gate="G$1" pin="1"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="-91.44" x2="271.78" y2="-91.44" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="&gt;NAME" pin="5"/>
+<wire x1="261.62" y1="-91.44" x2="220.98" y2="-91.44" width="0.1524" layer="91"/>
+<junction x="261.62" y="-91.44"/>
 </segment>
 </net>
 </nets>
