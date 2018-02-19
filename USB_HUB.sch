@@ -279,7 +279,7 @@
 <smd name="34" x="5.5" y="4" dx="1.5" dy="0.3" layer="1" rot="R270"/>
 <smd name="47" x="-1" y="4" dx="1.5" dy="0.3" layer="1" rot="R270"/>
 <smd name="33" x="6" y="4" dx="1.5" dy="0.3" layer="1" rot="R270"/>
-<circle x="-1.5" y="-5.5" radius="0.5" width="0.127" layer="1"/>
+<circle x="-1.5" y="-5.5" radius="0.5" width="0.127" layer="21"/>
 <smd name="48" x="-1.5" y="4" dx="1.5" dy="0.3" layer="1" rot="R270"/>
 <wire x1="7.1882" y1="-6.6548" x2="-2.667" y2="-6.6548" width="0.127" layer="21"/>
 <wire x1="-2.667" y1="-6.6548" x2="-2.667" y2="3.175" width="0.127" layer="21"/>
