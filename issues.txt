@@ -1,0 +1,9 @@
+Connect a logic analyzer
+Check the solder (remelt?)
+Continuity check the downstream ports
+Measure impedance of cables
+Try without samtec connectors
+Populate a second board?
+TI OTP?
+Remove ferrites for 0 ohm?
+
